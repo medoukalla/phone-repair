@@ -148,6 +148,20 @@ if (! function_exists('asset')) {
     }
 }
 
+if (! function_exists('asset_app')) {
+    /**
+     * Generate an asset_app path for the application.
+     *
+     * @param  string  $path
+     * @param  bool|null  $secure
+     * @return string
+     */
+    function asset_app($path, $secure = null)
+    {
+        return app('url')->asset('/app'.'/'.$path, $secure);
+    }
+}
+
 if (! function_exists('auth')) {
     /**
      * Get the available auth instance.
