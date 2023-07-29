@@ -1,77 +1,39 @@
-<div class="container-contact100">
-    <div class="wrap-contact100">
-        <form class="contact100-form validate-form">
-            <span class="contact100-form-title">
-                <font style="vertical-align: inherit;">
-                    <font style="vertical-align: inherit;">
-                        Dis bonjour!
-                    </font>
-                </font>
-            </span>
-            <div class="wrap-input100 validate-input" data-validate="Name is required">
-                <span class="label-input100">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">votre nom</font>
-                    </font>
-                </span>
-                <input class="input100" type="text" name="name" placeholder="Entrez votre nom">
-                <span class="focus-input100"></span>
+<div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h1 class="mb-3">Contact Us</h1>
+        <form>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="your-name" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="your-name" name="your-name" required>
             </div>
-            <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                <span class="label-input100">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">E-mail</font>
-                    </font>
-                </span>
-                <input class="input100" type="text" name="email" placeholder="Entrez votre adresse e-mail">
-                <span class="focus-input100"></span>
+            <div class="col-md-6">
+              <label for="your-surname" class="form-label">Your Surname</label>
+              <input type="text" class="form-control" id="your-surname" name="your-surname" required>
             </div>
-            
-            
-            <div class="wrap-input100 validate-input" data-validate="Message is required">
-                <span class="label-input100">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">Message</font>
-                    </font>
-                </span>
-                <textarea class="input100" name="message" placeholder="Votre message ici..."></textarea>
-                <span class="focus-input100"></span>
+            <div class="col-md-6">
+              <label for="your-email" class="form-label">Your Email</label>
+              <input type="email" class="form-control" id="your-email" name="your-email" required>
             </div>
-            <div class="container-contact100-form-btn">
-                <div class="wrap-contact100-form-btn">
-                    <div class="contact100-form-bgbtn"></div>
-                    <button class="contact100-form-btn">
-                        <span>
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">
-                                    Soumettre
-                                </font>
-                            </font><i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
-                        </span>
-                    </button>
+            <div class="col-md-6">
+              <label for="your-subject" class="form-label">Your Subject</label>
+              <input type="text" class="form-control" id="your-subject" name="your-subject">
+            </div>
+            <div class="col-12">
+              <label for="your-message" class="form-label">Your Message</label>
+              <textarea class="form-control" id="your-message" name="your-message" rows="5" required></textarea>
+            </div>
+            <div class="col-12">
+              <div class="row">
+                <div class="col-md-6">
+                  <button type="submit" class="btn btn-dark w-100 fw-bold" >Send</button>
                 </div>
+              </div>
             </div>
+          </div>
         </form>
+      </div>
     </div>
-
-
-    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/cf/ContactFrom_v4/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/cf/ContactFrom_v4/vendor/animate/animate.css">
-    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/cf/ContactFrom_v4/vendor/css-hamburgers/hamburgers.min.css">
-    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/cf/ContactFrom_v4/vendor/animsition/css/animsition.min.css">
-    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/cf/ContactFrom_v4/vendor/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/cf/ContactFrom_v4/css/util.css">
-    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/cf/ContactFrom_v4/css/main.css">
-
-    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js" nonce="717fb816-71cc-431a-90c6-e79d32bb7f12"></script>
-    <script src="https://colorlib.com/etc/cf/ContactFrom_v4/vendor/jquery/jquery-3.2.1.min.js"></script>
-    <script src="https://colorlib.com/etc/cf/ContactFrom_v4/vendor/animsition/js/animsition.min.js"></script>
-    <script src="https://colorlib.com/etc/cf/ContactFrom_v4/vendor/daterangepicker/moment.min.js"></script>
-    <script src="https://colorlib.com/etc/cf/ContactFrom_v4/vendor/daterangepicker/daterangepicker.js"></script>
-    <script src="https://colorlib.com/etc/cf/ContactFrom_v4/vendor/countdowntime/countdowntime.js"></script>
-    <script src="https://colorlib.com/etc/cf/ContactFrom_v4/js/main.js"></script>
-
-
-    <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.qhDXWpKopYk.L.W.O/d=0/rs=AN8SPfp0QXhhaDDdjg_LgcSqoZiPEzC1tw/m=el_main_css">
-
-</div>
+  </div>
+  

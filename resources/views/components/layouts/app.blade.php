@@ -5,8 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bootstrap demo</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://getbootstrap.com/docs/5.2/examples/product/product.css">
 
         <title>{{ $title ?? 'Page Title' }}</title>
+
+        <style>
+          .card img {
+              max-width: 100%;
+              max-height: 300px;
+          }
+        </style>
+
     </head>
     <body>
 
@@ -18,11 +27,11 @@
               </a>
         
               <ul class="nav nav-pills">
-                <li class="nav-item"><a href="{{ route('frontend.index') }}" wire:navigate class="nav-link" aria-current="page">Accueil</a></li>
-                <li class="nav-item"><a href="{{ route('frontend.tarifs') }}" wire:navigate class="nav-link">Nos tarifs</a></li>
-                <li class="nav-item"><a href="{{ route('frontend.faq') }}" wire:navigate class="nav-link">F.A.Q</a></li>
-                <li class="nav-item"><a href="{{ route('frontend.contact') }}" wire:navigate class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="{{ route('frontend.postal') }}" wire:navigate class="nav-link active bg-warning">Envoi postal</a></li>
+                <li class="nav-item"><a href="{{ route('frontend.index') }}" wire:navigate.hover class="nav-link" aria-current="page">Accueil</a></li>
+                <li class="nav-item"><a href="{{ route('frontend.tarifs') }}" wire:navigate.hover class="nav-link">Nos tarifs</a></li>
+                <li class="nav-item"><a href="{{ route('frontend.faq') }}" wire:navigate.hover class="nav-link">F.A.Q</a></li>
+                <li class="nav-item"><a href="{{ route('frontend.contact') }}" wire:navigate.hover class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="{{ route('frontend.postal') }}" wire:navigate.hover class="nav-link active bg-warning">Envoi postal</a></li>
               </ul>
             </header>
         </div>
