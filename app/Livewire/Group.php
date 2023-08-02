@@ -15,17 +15,9 @@ class Group extends Component
     public $devices;
     public $group;
 
-    public function mount() {
-        // category id from 
-        $id = Route::current()->parameter('group');
-        // check if there is group with the id from url 
-        if ( ModelsGroup::where('id', $id)->exists() ) {
-            $this->group = ModelsGroup::where('id', $id)->first();
-            // get devices 
-            $this->devices = Device::where('group_id', $id)->get();
-        }else {
-            return $this->redirect('/', navigate: true);
-        }
+    public function mount( ModelsGroup $group ) {
+        $this->devices = $group->devices;
+        $this->group   = $group;
     }
 
     public function render()

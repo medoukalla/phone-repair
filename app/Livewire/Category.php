@@ -13,16 +13,8 @@ class Category extends Component
 
     public $groups;
 
-    public function mount() {
-        // category id from 
-        $id = Route::current()->parameter('category');
-        // check if there is category with the id from url 
-        if ( ModelsCategory::where('id', $id)->exists() ) {
-            // get groups 
-            $this->groups = Group::where('category_id', $id)->get();
-        }else {
-            return $this->redirect('/', navigate: true);
-        }
+    public function mount(ModelsCategory $category) {
+        $this->groups = $category->groups;
     }
 
     public function render()

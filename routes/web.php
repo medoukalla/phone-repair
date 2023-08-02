@@ -8,6 +8,7 @@ use App\Livewire\Faq;
 use App\Livewire\Group;
 use App\Livewire\HomePage;
 use App\Livewire\Tarifs;
+use App\Models\Order;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,6 +36,8 @@ Route::get('/faq', Faq::class )->name('frontend.faq');
 Route::get('/contact', Contact::class )->name('frontend.contact');
 // Envoi postal page 
 Route::get('/envoi_postal', EnvoiPostal::class )->name('frontend.postal');
+// Store new order
+Route::post('/envoi_postal', [Order::class, 'store'])->name('frontend.store.order');
 
 // show category groups
 Route::get('/category/{category}', Category::class )->name('frontend.category');
