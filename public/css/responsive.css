@@ -1,0 +1,299 @@
+/* Root includ */
+@import url(root.css);
+
+@media screen and (max-width: 991px) and (min-width: 600px) {
+  /* Mobile nav */
+  header {
+    background-color: black;
+  }
+  .top-bar nav {
+    position: fixed;
+    top: 98px;
+    left: 0;
+    background-color: var(--black-color);
+    width: 100%;
+    padding-bottom: 50px;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out;
+  }
+  .show-nav {
+    transform: translateX(0%) !important;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px !important;
+    padding: 0 !important;
+  }
+  nav ul li a {
+    color: #fff !important;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+  .bar {
+    height: 2px;
+    width: 27px;
+    background-color: #fff;
+    margin: 5px 0;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+  .top-bar nav ul li a.envoi-postal {
+    transition: all 0.1s ease-in-out !important;
+  }
+  .top-bar nav ul li a.envoi-postal:hover::after {
+    width: 0% !important;
+  }
+  .top-bar nav ul li a.envoi-postal:hover {
+    background-color: #610000;
+  }
+  .envoi-postal {
+    background-color: var(--red);
+    padding: 10px 20px;
+    border-radius: 50px;
+  }
+  .envoi-postal:hover {
+    border-bottom: none !important;
+  }
+  /* Sticky animations */
+  header.sticky {
+    /* backdrop-filter: blur(10px); */
+    background-color: black !important;
+    box-shadow: 0px 1px 6px #00000030;
+    /* transform: translateY(-100%); */
+  }
+  .send-post {
+    display: none;
+  }
+  /* Mobile nav End */
+  .protection-img img,
+  .reparation-img img {
+    height: 351px;
+  }
+}
+/* Fonts size */
+@media screen and (max-width: 991px) and (min-width: 600px) {
+  .hero h1 {
+    font-size: 35px !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* Fonts Start*/
+  .hero h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+  .companies-board h1 {
+    font-size: 22px !important;
+  }
+  .section-title {
+    font-size: 25px;
+  }
+  .semi-title,
+  .reparation p {
+    font-size: 16px !important;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .contact .step-content ul,
+  .contact .step-content ul li {
+    list-style: none;
+    text-align: center;
+    padding-left: 0 !important;
+  }
+
+  /* Fonts End*/
+  /* Buttons Start */
+  a {
+    text-align: center !important;
+  }
+  /* Buttons End*/
+  a button {
+    width: 256px;
+    padding: 10px;
+  }
+  .top-bar {
+    padding: 0px 10px;
+    position: relative;
+    align-items: center;
+    height: 100px;
+    transition: all 0.5s ease-in-out;
+  }
+  .top-bar .send-post {
+    display: none;
+  }
+  .top-bar .logo img {
+    height: 50px;
+    transition: all 0.5s ease-in-out;
+  }
+  /* Mobile nav */
+  header {
+    background-color: black;
+  }
+  .top-bar nav {
+    position: fixed;
+    top: 98px;
+    left: 0;
+    background-color: var(--black-color);
+    width: 100%;
+    padding-bottom: 50px;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out;
+  }
+  .show-nav {
+    transform: translateX(0%) !important;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px !important;
+    padding: 0 !important;
+  }
+  nav ul li a {
+    color: #fff !important;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+  .bar {
+    height: 2px;
+    width: 27px;
+    background-color: #fff;
+    margin: 5px 0;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+  .top-bar nav ul li a.envoi-postal {
+    transition: all 0.1s ease-in-out !important;
+  }
+  .top-bar nav ul li a.envoi-postal:hover::after {
+    width: 0% !important;
+  }
+  .top-bar nav ul li a.envoi-postal:hover {
+    background-color: #610000;
+  }
+  .envoi-postal {
+    background-color: var(--red);
+    padding: 10px 20px;
+    border-radius: 50px;
+  }
+  .envoi-postal:hover {
+    border-bottom: none !important;
+  }
+  /* Sticky animations */
+  header.sticky {
+    /* backdrop-filter: blur(10px); */
+    background-color: black !important;
+    box-shadow: 0px 1px 6px #00000030;
+    /* transform: translateY(-100%); */
+  }
+  /* Mobile nav End */
+  .company {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  .companies-board {
+    padding: 50px 0px;
+    gap: 0px;
+  }
+  .company img {
+    height: 90px;
+  }
+  .company .apple,
+  .android {
+    padding: 40px 50px;
+    border-radius: 20px;
+  }
+  .reparation {
+    padding: 50px 0px;
+    text-align: center;
+  }
+  .reparation p {
+    text-align: center;
+    width: 100%;
+  }
+  .reparation .protection-img,
+  .reparation .reparation-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .reparation h1 {
+    font-size: 25px;
+  }
+  .reparation .protection-img img,
+  .reparation .reparation-img img {
+    height: 300px;
+  }
+  .reparation .reparation-container {
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid var(--light-grey);
+  }
+  .reparation .reparation-container .row {
+    flex-direction: column-reverse !important;
+  }
+  .reparation .protection-container .row {
+    /* flex-direction: column-reverse !important; */
+  }
+  /* Swipper slide */
+  .swiper-slide {
+    padding: 24px 20px;
+  }
+  /* Reparation page */
+  .reparation-price .row {
+    flex-direction: column-reverse;
+  }
+  .phone-checked img {
+    height: 300px;
+  }
+  .reparation-price {
+    padding: 50px 0px;
+  }
+  .reparation-total h2 {
+    font-size: 20px;
+  }
+  .client-infos {
+    padding: 20px 50px;
+  }
+  .malfunctions-checking {
+    margin-bottom: 50px;
+  }
+  /* Envoi Postal page */
+  .companies-board h1 {
+    font-size: 30px;
+  }
+  .companies-board p {
+    width: 80% !important;
+  }
+  .steps-side {
+    margin-bottom: 50px;
+  }
+  .step .num {
+    display: none;
+  }
+  .step .step-content .step-title,
+  .steps-box h1,
+  .device-form p,
+  .steps-box p {
+    width: 100% !important;
+    text-align: center;
+  }
+  .step {
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* Footer */
+@media screen and (max-width: 600px) {
+  footer .row {
+    text-align: center;
+  }
+}

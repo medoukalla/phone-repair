@@ -1,0 +1,17 @@
+:root {
+  --font-family: "Poppins", sans-serif;
+  --black-color: black;
+  --white-color: white;
+  --red: #ff0000;
+  --light-grey: rgba(0, 0, 0, 0.2);
+}
+input:focus-visible {
+  outline: none !important;
+}
+textarea:focus-visible {
+  outline: none !important;
+}
+button:focus:not(:focus-visible) {
+  /* outline: none !important; */
+  box-shadow: none !important;
+}
