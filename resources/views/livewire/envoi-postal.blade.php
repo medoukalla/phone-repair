@@ -136,7 +136,7 @@
           <!-- Button envoyer -->
           <input type="hidden" name="device_id" >
           @if ( $status == 'success' )
-            <div class="alert alert-success mt-5">Success message </div>
+            <div class="alert alert-success mt-5">{{ $status_message }}</div>
           @endif
           <a><button class="mt-5" onclick="openPopup()" >Envoyer</button></a>
         </div>

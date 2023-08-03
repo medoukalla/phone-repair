@@ -76,32 +76,36 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="device-form">
-            <h1>Prise de contact</h1>
-            <p>Une question ? Un problème ? C'est ici!
-            </p>
-            <div class="d-flex w-100">
-              <input type="text" placeholder="Votre prénom" />
-              <input type="text" placeholder="Votre nom" />
+    <form wire:submit.prevent="submit" >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="device-form">
+              <h1>Prise de contact</h1>
+              <p>Une question ? Un problème ? C'est ici!
+              </p>
+              <div class="d-flex w-100">
+                <input wire:model.live='firstName' required type="text" placeholder="Votre prénom" />
+                <input wire:model.live='lastName' required type="text" placeholder="Votre nom" />
+              </div>
+              <div class="d-flex w-100">
+                <input wire:model.live='email' required type="text" placeholder="Votre adresse mail" />
+                <input wire:model.live='phoneNumber' required type="text" placeholder="Votre numéro de téléphone" />
+              </div>
+              <textarea wire:model.live='message' class="w-100" name="description" required placeholder="Exprimez-vous..."></textarea>
             </div>
-            <div class="d-flex w-100">
-              <input type="text" placeholder="Votre adresse mail" />
-              <input type="text" placeholder="Votre numéro de téléphone" />
-            </div>
-            <textarea class="w-100" name="description" type="" placeholder="Exprimez-vous...">
-            </textarea>
           </div>
         </div>
       </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <!-- Button envoyer -->
-        <a href="#"><button class="mt-5">Envoyer</button></a>
+      <div class="container">
+        <div class="row">
+          @if ( $status == 'success' )
+            <div class="alert alert-success mt-5">{{ $status_message }}</div>
+          @endif
+          <!-- Button envoyer -->
+          <a><button type="submit" class="mt-5">Envoyer</button></a>
+        </div>
       </div>
-    </div>
+    </form>
   </div>
 </main>
