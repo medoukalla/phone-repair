@@ -1,33 +1,216 @@
-<main>
-
-  <section class="text-center container pt-5">
-    <div class="row">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Réparation Smartphones, <br>
-          Tablettes et Ordinateurs</h1>
-      </div>
-    </div>
-  </section>
-
-  <div class="album py-5">
+<div>
+  <div class="hero mb-0">
     <div class="container">
+      <h1>Réparez vos appareils électroniques en toute confiance.</h1>
+      <div class="companies-board">
+        <h1>Réparation Smartphones, Tablettes et Ordinateurs.</h1>
+        <div class="company">
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
-        @foreach ($categories as $category)
-
-          <div class="col">
-            <div class="card shadow-sm">
-              <a href="{{ route('frontend.category', $category) }}" wire:navigate >
-                <img src="{{ asset_app($category->image) }}" alt="" style="cursor: pointer;">
+          
+          @foreach ($categories as $category)
+  
+            @if ( $category->name == 'Apple' )    
+              <a href="{{ route('frontend.category', $category) }}" wire:navigate>
+                <div class="apple">
+                  <img src="{{ asset('img/Apple.svg') }}" alt="android" />
+                </div>
               </a>
-            </div>
-          </div>
+              
+            @elseif ( $category->name == 'Android' )
+      
+              <a href="{{ route('frontend.category', $category) }}" wire:navigate >
+                <div class="android">
+                  <img src="{{ asset('img/android.svg') }}" alt="android" />
+                </div>
+              </a>
 
-        @endforeach
-
+            @endif
+  
+          @endforeach
+  
+        </div>
       </div>
     </div>
   </div>
-
-</main>
+  
+  <!-- Circle End -->
+  <section class="reparation">
+    <div class="container reparation-container">
+      <div class="row d-flex justify-content-between">
+        <div class="col-md-6 reparation-text">
+          <h1>Réparation vitre cassée</h1>
+          <p>
+            Grâce à la technologie laser, nous pouvons remplacer l’arrière de
+            votre smartphone en toute sécurité.
+          </p>
+          <a href="#">
+            <button>demande de réparation</button>
+          </a>
+        </div>
+        <div class="col-md-6 reparation-img">
+          <img src="{{ asset('img/machine.png') }}" alt="machine" />
+        </div>
+      </div>
+    </div>
+    <div class="container protection-container">
+      <div class="row d-flex justify-content-between">
+        <div class="col-md-6 protection-img">
+          <img src="{{ asset('img/phone.png') }}" alt="machine" />
+        </div>
+        <div class="col-md-6 protection-text">
+          <h1>Protection sur-mesure</h1>
+          <p>
+            Protégez tous vos appareils sur-mesure grâce à notre protection
+            hydrogel.
+          </p>
+          <a href="#">
+            <button>demande de réparation</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr />
+  
+  <section class="feedbacks d-flex flex-column">
+    <h1 class="section-title text-center">Feedback</h1>
+    <p class="semi-title text-center">Ce que disent nos clients.</p>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- slide -->
+        <div class="swiper-slide">
+          <h2>Yassine</h2>
+          <div class="stars">
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+          </div>
+          <p class="text-start">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Molestiae, ipsa.
+          </p>
+        </div>
+        <!-- End slide -->
+        <!-- slide -->
+        <div class="swiper-slide">
+          <h2>Yassine</h2>
+          <div class="stars">
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+          </div>
+          <p class="text-start">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Molestiae, ipsa.
+          </p>
+        </div>
+        <!-- End slide -->
+        <!-- slide -->
+        <div class="swiper-slide">
+          <h2>Yassine</h2>
+          <div class="stars">
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+          </div>
+          <p class="text-start">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Molestiae, ipsa.
+          </p>
+        </div>
+        <!-- End slide -->
+        <!-- slide -->
+        <div class="swiper-slide">
+          <h2>Yassine</h2>
+          <div class="stars">
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+          </div>
+          <p class="text-start">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Molestiae, ipsa.
+          </p>
+        </div>
+        <!-- End slide -->
+        <!-- slide -->
+        <div class="swiper-slide">
+          <h2>Yassine</h2>
+          <div class="stars">
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+          </div>
+          <p class="text-start">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Molestiae, ipsa.
+          </p>
+        </div>
+        <!-- End slide -->
+        <!-- slide -->
+        <div class="swiper-slide">
+          <h2>Yassine</h2>
+          <div class="stars">
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+          </div>
+          <p class="text-start">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Molestiae, ipsa.
+          </p>
+        </div>
+        <!-- End slide -->
+        <!-- slide -->
+        <div class="swiper-slide">
+          <h2>Yassine</h2>
+          <div class="stars">
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+          </div>
+          <p class="text-start">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Molestiae, ipsa.
+          </p>
+        </div>
+        <!-- End slide -->
+        <!-- slide -->
+        <div class="swiper-slide">
+          <h2>Yassine</h2>
+          <div class="stars">
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+            <img src="{{ asset('img/star.svg') }}" alt="star" />
+          </div>
+          <p class="text-start">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Molestiae, ipsa.
+          </p>
+        </div>
+        <!-- End slide -->
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="google-avis text-center">
+      Source: Avis <a href="#">Google</a>
+    </div>
+  </section>
+</div>

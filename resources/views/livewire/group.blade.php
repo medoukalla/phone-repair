@@ -1,39 +1,28 @@
-<main>
+<div class="hero">
+  <div class="container">
+    <h1>Réparez vos appareils électroniques en toute confiance.</h1>
+    <div class="companies-board" style="position: relative;">
+      <a href="{{ route('frontend.category', $group->category_id) }}" class="btn btn-light" wire:navigate.hover style="position: absolute;left: 15px;top: 15px;border-radius: 30px;width: 50px;">
+        <i class="fas fa-arrow-left"><</i>
+      </a>
 
-    <section class="text-center container pt-5">
-      <div class="row">
-        <div class="col-12 mx-auto text-start">
-          <a href="{{ route('frontend.category', $group->category_id) }}" class="btn btn-primary" wire:navigate.hover>
-          < Retour
-        </a>
-        </div>
-        <div class="col-12 mx-auto">
-          <h1 class="fw-light">
-            Sélectionnez le type d'appareil avec discernement
-          </h1>
-        </div>
-      </div>
-    </section>
-  
-    <div class="album py-5">
-      <div class="container">
-  
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-  
-          @foreach ( $devices as $device )
-  
-            <div class="col">
-              <div class="card shadow-sm text-center">
-                <a href="{{ route('frontend.device', $device->id) }}" wire:navigate >
-                  <img src="{{ asset_app($device ->image) }}" alt="" style="cursor: pointer;">
-                </a>
-              </div>
+      <h1>Choisissez avec soin le type de votre téléphone</h1>
+      <div class="company row">
+        @foreach ( $devices as $device )
+
+            <div class="col-md-5">
+              <a href="{{ route('frontend.device', $device->id) }}" wire:navigate >
+                <div class="phone">
+                  <img src="{{ asset_app($device ->image) }}" alt="{{ $device->name }}" />
+                </div>
+                <h3>{{ $device->name }}</h3>
+              </a>
             </div>
   
           @endforeach
-  
-        </div>
+        
+        
       </div>
     </div>
-  
-  </main>
+  </div>
+</div>

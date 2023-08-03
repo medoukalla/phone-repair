@@ -1,45 +1,198 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bootstrap demo</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://getbootstrap.com/docs/5.2/examples/product/product.css">
 
-        <title>{{ $title ?? 'Page Title' }}</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <!-- Style -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+  <link rel="stylesheet" href="{{ asset('css/circle.css') }}" />
+  <link rel="stylesheet" href="{{ asset('css/swipper.css') }}" />
+  <link rel="stylesheet" href="{{ asset('css/root.css') }}" />
+  <link rel="stylesheet" href="{{ asset('css/responsive.css') }}" />
+  <!-- Javascript -->
+  <script defer src="{{ asset('js/bootstrap.min.js') }}""></script>
+  <script defer src="{{ asset('js/popper.min.js') }}""></script>
+  <script defer src="{{ asset('js/swipper.js') }}""></script>
+  <script defer src="{{ asset('js/main.js') }}""></script>
+  <title>{{ $title ?? 'Page Title' }}</title>
+</head>
 
-        <style>
-          .card img {
-              max-width: 100%;
-              max-height: 300px;
-          }
-        </style>
 
-    </head>
-    <body>
 
-        <div class="container">
-            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-              <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-                <span class="fs-4">Logo</span>
-              </a>
-        
-              <ul class="nav nav-pills">
-                <li class="nav-item"><a href="{{ route('frontend.index') }}" wire:navigate.hover class="nav-link" aria-current="page">Accueil</a></li>
-                <li class="nav-item"><a href="{{ route('frontend.tarifs') }}" wire:navigate.hover class="nav-link">Nos tarifs</a></li>
-                <li class="nav-item"><a href="{{ route('frontend.faq') }}" wire:navigate.hover class="nav-link">F.A.Q</a></li>
-                <li class="nav-item"><a href="{{ route('frontend.contact') }}" wire:navigate.hover class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="{{ route('frontend.postal') }}" wire:navigate.hover class="nav-link active bg-warning">Envoi postal</a></li>
-              </ul>
-            </header>
+<body>
+  <header>
+    <div class="container">
+      <div class="top-bar">
+        <div class="logo">
+          <img src="{{ asset('img/logo.png') }}" alt="logo" />
         </div>
+        <nav>
+          <ul>
+            <li><a href="{{ route('frontend.index') }}" wire:navigate.hover >Accueil</a></li>
+            <li><a href="{{ route('frontend.tarifs') }}" wire:navigate.hover >Nos tarifs </a></li>
+            <li><a href="{{ route('frontend.faq') }}" wire:navigate.hover >F.A.Q</a></li>
+            <li><a href="{{ route('frontend.contact') }}" wire:navigate.hover >Contact</a></li>
+            <li><a href="{{ route('frontend.postal') }}" wire:navigate.hover class="envoi-postal">Envoi postal</a></li>
+          </ul>
+        </nav>
+        <div>
+          <a href="{{ route('frontend.postal') }}" wire:navigate.hover class="send-post">
+            <button>Envoi postal</button>
+          </a>
+        </div>
+        <!-- hamburger menu -->
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
 
 
-        {{ $slot }}
+  {{ $slot }}
 
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    </body>
+ 
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6">
+          <div class="footer-item">
+            <img src="{{ asset('img/logo.png') }}" alt="logo" />
+          </div>
+          <div>
+            <div class="item-title mt-0">
+              <div class="">Telephone</div>
+            </div>
+            <div class="item-info">
+              <h3>0600000000</h3>
+              <h3>0700000000</h3>
+            </div>
+          </div>
+          <div>
+            <div class="item-title">
+              <div>Adress e-mail</div>
+            </div>
+            <div class="item-info">
+              <h3>test@gmail.com</h3>
+            </div>
+          </div>
+          <div>
+            <div class="item-title">
+              <div>Adress</div>
+            </div>
+            <div class="item-info">
+              <h3>44 Rue Nationale, <br />365645 Condrieu</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 liens-utiles">
+          <div class="footer-item">
+            <div>
+              <h1>Liens Utiles</h1>
+            </div>
+          </div>
+          <div>
+            <div class="item-info">
+              <a href="#">Accueil</a>
+            </div>
+          </div>
+          <div>
+            <div class="item-info">
+              <a href="#">Envoi postal</a>
+            </div>
+          </div>
+          <div>
+            <div class="item-info">
+              <a href="#">Nos tarifs</a>
+            </div>
+          </div>
+          <div>
+            <div class="item-info">
+              <a href="#">F.A.Q</a>
+            </div>
+          </div>
+          <div>
+            <div class="item-info">
+              <a href="#">Contact</a>
+            </div>
+          </div>
+          <div>
+            <div class="item-info">
+              <a href="#">Avertissement appareils Apple</a>
+            </div>
+          </div>
+          <div>
+            <div class="item-info">
+              <a href="#">Qualités de piéces détachées</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 liens-legal">
+          <div class="footer-item">
+            <div>
+              <h1>Liens Utiles</h1>
+            </div>
+          </div>
+          <div>
+            <div class="item-info">
+              <a href="#">Politique confidentialité</a>
+            </div>
+          </div>
+          <div>
+            <div class="item-info">
+              <a href="#">Politique de cookies</a>
+            </div>
+          </div>
+          <div>
+            <div class="item-info">
+              <a href="#">Conditions de la garantie</a>
+            </div>
+          </div>
+          <div>
+            <div class="item-info">
+              <a href="#">Mentions légales</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 social-media">
+          <div class="footer-item">
+            <div>
+              <h1>Nos réseaux sociaux</h1>
+            </div>
+          </div>
+          <div>
+            <div class="item-info">
+              <a href="#"><img src="{{ asset('img/icons/white/facebook.svg') }}" alt="facebook" /></a>
+              <a href="#"><img src="{{ asset('img/icons/white/insta.svg') }}" alt="instagram" /></a>
+              <a href="#"><img src="{{ asset('img/icons/white/tiktok.svg') }}" alt="tiktok" /></a>
+              <a href="#"><img src="{{ asset('img/icons/white/snap.svg') }}" alt="Snapchat" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Copyrights -->
+  <div class="copyrights text-center">
+    <h4>© Copyright 2023. site.com</h4>
+    <h5>
+      Édité par <span><a href="#">MARWAN BENZNANA.</a></span>
+    </h5>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</body>
+
 </html>

@@ -1,65 +1,81 @@
 <main>
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-      <div class="col-md-5 p-lg-5 mx-auto my-5">
-        <a href="{{ route('frontend.group', $device->group->id ) }}" class="btn btn-primary" wire:navigate.hover>
-          < Retour
-        </a>
-        <h1 class="display-4 fw-normal">Réparez vos appareils
-            électroniques en toute confiance.</h1>
 
-        <h2>{{ $device->name }}</h2>
-        <a class="btn btn-outline-secondary" href="#">
-            {{ $device->category->name }}
-        </a>
-      </div>
-      <div class="product-device shadow-sm d-none d-md-block">
-        <img src="{{ asset_app($device->image) }}" alt="" style="max-width: 100%;">
-      </div>
-      <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-    </div>
-  
-  
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-      <div class="text-bg-dark me-md-3 pt-3 px-3 px-md-5 text-center overflow-hidden">
-        <div class="my-3">
-            <img src="{{ asset_app( $device->image ) }}" alt="" style=" max-height: 500px; ">
-            <h2 class="display-5">
-                $ {{ $total }}
-            </h2>
+    <div class="hero mb-0">
+      <div class="container">
+        <h1>Réparez vos appareils électroniques en toute confiance.</h1>
+        <div class="companies-board gap-4" style="position: relative;" >
+          <a href="{{ route('frontend.group', $device->group->id ) }}" class="btn btn-light" wire:navigate.hover style="position: absolute;left: 15px;top: 15px;border-radius: 30px;width: 50px;">
+            <i class="fas fa-arrow-left"><</i>
+          </a>
+
+          <h1 class="mb-0">Réparation {{ $device->name }}</h1>
+          <div class="company">
+            <div class="company-type">
+              <h2>{{ $device->category->name }}</h2>
+            </div>
+          </div>
         </div>
-
-        <div class="my-3"> 
-          <h6>Veuillez mettre votre numéro de téléphone pour passer votre commande</h6><br>
-          <h3>Numéro de téléphone</h3>
-          
-          <input type="number" class="form-control" placeholder="+1XXXXXXXX" wire:model.live="phoneNumber">
-
-          <a wire:click="start_order({{ $device }})" class="btn btn-lg btn-outline-warning btn-lg mt-3" >Submit</a>
-            
       </div>
+    </div>
 
-      </div>
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="bg-white shadow-dm mx-auto p-4" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
-            <table class="table table-responsive text-start ">
-                <tr>
-                    <th>Réparation</th>
-                    <th>Prix</th>
-                </tr>
-                @foreach ( $repairs as $repair )
-                    <tr wire:click="add_repair({{ $repair }})" style="line-height: 60px; font-size: 20px; cursor: pointer; @if( in_array( $repair->id, $counted ) ) background-color: #0cdb7d7a; transition: 0.3s; @endif" >
-                        <td>{{ $repair->title }}</td>
-                        <td>{{ $repair->price }}</td>
+    <div class="reparation-price">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex flex-column align-items-center">
+            <div class="phone-checked">
+              <img src="{{ asset_app($device->image) }}" alt="phone-checked" />
+            </div>
+            <div class="reparation-total">
+              <h2>Total: <span>{{ $total }} €</span></h2>
+            </div>
+            <div class="client-infos d-flex flex-column text-center">
+              <!-- Title -->
+              <div class="info-title">
+                <h4>
+                  Veuillez entrer votre numéro de téléphone pour vous contacter.
+                </h4>
+              </div>
+              <!-- Phone number -->
+              <div class="d-flex flex-column">
+                <label for="">Numéro de téléphone :* </label>
+                <input type="nuber" wire:model.live="phoneNumber" placeholder="" />
+              </div>
+              
+              <a wire:click="start_order({{ $device }})" class="reparation-btn">
+                <button>Demande de réparation</button>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="malfunctions-checking">
+              <div class="malfunctions-heading">
+                <h4>
+                  Veuillez mentionner les problèmes que rencontre votre
+                  téléphone, s'il vous plaît.
+                </h4>
+              </div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Réparation</th>
+                    <th scope="col">Prix</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @foreach ( $repairs as $repair )
+                    <tr wire:click="add_repair({{ $repair }})" style="cursor: pointer; @if( in_array( $repair->id, $counted ) ) background-color: #0cdb7d7a; transition: 0.3s; @endif" >
+                      <td>{{  $repair->title  }}</td>
+                      <td>{{ $repair->price }} €</td>
                     </tr>
-                @endforeach
-            </table>
+                  @endforeach
+                    
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
-
-        
       </div>
     </div>
-  
-    
 
-    
-  </main>
+</main>
+  

@@ -22,6 +22,7 @@ class EnvoiPostal extends Component
     public $address;
     public $city;
     public $codePostal;
+    public $description;
     
     public $device_mark;
     public $device_password;
@@ -67,8 +68,34 @@ class EnvoiPostal extends Component
     }
 
 
-    public function saveorder() {
-        $this->status = 'success';
-        $this->status_message = 'dkjnwekndwkndwe';
+    public function submit() {
+
+        $order = new Order();
+        $order->first_name      = $this->firstName;
+        $order->last_name       = $this->lastName;
+        $order->address         = $this->address;
+        $order->city            = $this->city;
+        $order->code_postal     = $this->codePostal;
+        $order->phone           = $this->phoneNumber;
+        $order->device_id       = $this->device->id;
+        $order->total           = $this->total;
+        $order->device_code     = $this->device_password;
+        $order->repairs         = $this->repairs_ids;
+        $order->repairs_text    = $this->repairs_text;
+        $order->description     = $this->description;
+
+        if ( $order->save() ) {
+            $this->status = 'success';
+            $this->status_message = 'Votre commande a été soumise avec succès.';
+
+            // clear the inputs 
+            $this->firstName = $this->lastName = $this->address = $this->phoneNumber = $this->city = $this->codePostal = $this->device_password = $this->description = $this->status = $this->status_message = null;
+            // clear the session 
+            session()->forget('order');
+
+        }
+
     }
+
+
 }
