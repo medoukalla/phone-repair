@@ -2,12 +2,16 @@
 
 use App\Livewire\Category;
 use App\Livewire\Contact;
+use App\Livewire\CookiesPolicy;
 use App\Livewire\Device;
 use App\Livewire\EnvoiPostal;
 use App\Livewire\Faq;
 use App\Livewire\Group;
 use App\Livewire\HomePage;
+use App\Livewire\LegalNotice;
+use App\Livewire\PrivacyPolicy;
 use App\Livewire\Tarifs;
+use App\Livewire\WarrantyConditions;
 use App\Models\Order;
 use Illuminate\Support\Facades\Route;
 
@@ -47,6 +51,17 @@ Route::get('/group/{group}', Group::class )->name('frontend.group');
 
 // Show device with list of repais
 Route::get('/device/{device}', Device::class )->name('frontend.device');
+
+
+// Privacy policy
+Route::get('/Politique_confidentialite', PrivacyPolicy::class  )->name('frontend.privacy');
+// Cookies policy
+Route::get('/politique_de_cookies', CookiesPolicy::class )->name('frontend.cookies.policy');
+// Warranty conditions
+Route::get('/conditions_de_la_garantie', WarrantyConditions::class )->name('frontend.garantie');
+// legal notice
+Route::get('/mentions_legales', LegalNotice::class )->name('frontend.legal.notice');
+
 
 Route::group(['prefix' => 'dashboard'], function () {
     Voyager::routes();

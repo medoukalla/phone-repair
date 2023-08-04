@@ -68,6 +68,7 @@
   <footer>
     <div class="container">
       <div class="row">
+
         <div class="col-lg-3 col-sm-6">
           <div class="footer-item">
             <img src="{{ asset('img/logo.png') }}" alt="logo" />
@@ -98,6 +99,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-lg-3 col-sm-6 liens-utiles">
           <div class="footer-item">
             <div>
@@ -106,27 +108,27 @@
           </div>
           <div>
             <div class="item-info">
-              <a href="{{ route('frontend.index') }}" wire:navigate.hover>Accueil</a>
+              <a href="{{ route('frontend.index') }}" wire:navigate>Accueil</a>
             </div>
           </div>
           <div>
             <div class="item-info">
-              <a href="{{ route('frontend.postal') }}" wire:navigate.hover>Envoi postal</a>
+              <a href="{{ route('frontend.postal') }}" wire:navigate>Envoi postal</a>
             </div>
           </div>
           <div>
             <div class="item-info">
-              <a href="{{ route('frontend.tarifs') }}" wire:navigate.hover>Nos tarifs</a>
+              <a href="{{ route('frontend.tarifs') }}" wire:navigate>Nos tarifs</a>
             </div>
           </div>
           <div>
             <div class="item-info">
-              <a href="{{ route('frontend.faq') }}" wire:navigate.hover>F.A.Q</a>
+              <a href="{{ route('frontend.faq') }}" wire:navigate>F.A.Q</a>
             </div>
           </div>
           <div>
             <div class="item-info">
-              <a href="{{ route('frontend.contact') }}" wire:navigate.hover>Contact</a>
+              <a href="{{ route('frontend.contact') }}" wire:navigate>Contact</a>
             </div>
           </div>
           <div>
@@ -140,6 +142,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-lg-3 col-sm-6 liens-legal">
           <div class="footer-item">
             <div>
@@ -148,22 +151,22 @@
           </div>
           <div>
             <div class="item-info">
-              <a href="#">Politique confidentialité</a>
+              <a href="{{ route('frontend.privacy') }}" wire:navigate >Politique confidentialité</a>
             </div>
           </div>
           <div>
             <div class="item-info">
-              <a href="#">Politique de cookies</a>
+              <a href="{{ route('frontend.cookies.policy') }}" wire:navigate >Politique de cookies</a>
             </div>
           </div>
           <div>
             <div class="item-info">
-              <a href="#">Conditions de la garantie</a>
+              <a href="{{ route('frontend.garantie') }}" wire:navigate >Conditions de la garantie</a>
             </div>
           </div>
           <div>
             <div class="item-info">
-              <a href="#">Mentions légales</a>
+              <a href="{{ route('frontend.legal.notice') }}" wire:navigate >Mentions légales</a>
             </div>
           </div>
         </div>
