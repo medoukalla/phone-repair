@@ -26,9 +26,7 @@
               </div>
               <div class="step-content">
                 <div class="step-title">Siége social</div>
-                <p class="w-75 m-0">
-                  44 Rue Nationale, 69420 Condrieu France
-                </p>
+                <p class="w-75 m-0">{{ setting('site.adress') }}</p>
               </div>
             </div>
             <!-- Step -->
@@ -59,9 +57,9 @@
                 <div class="step-title">Contact</div>
                 <p class="w-75 m-0">
                 <ul>
-                  <li>+(33)666666666</li>
-                  <li>+(33)666666666</li>
-                  <li>email@outlook.fr</li>
+                  <li>{{ setting('site.phone') }}</li>
+                  <li>{{ setting('site.phone_2') }}</li>
+                  <li>{{ setting('site.email') }}</li>
                 </ul>
                 </p>
               </div>

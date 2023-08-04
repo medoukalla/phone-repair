@@ -78,134 +78,25 @@
     <!-- Swiper -->
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-        <!-- slide -->
-        <div class="swiper-slide">
-          <h2>Yassine</h2>
-          <div class="stars">
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
+        @foreach ( $feedbacks as $feedback)
+          
+          <!-- slide -->
+          <div class="swiper-slide">
+            <h2>{{ $feedback->name }}</h2>
+            <div class="stars">
+              <img src="{{ asset('img/star.svg') }}" alt="star" />
+              <img src="{{ asset('img/star.svg') }}" alt="star" />
+              <img src="{{ asset('img/star.svg') }}" alt="star" />
+              <img src="{{ asset('img/star.svg') }}" alt="star" />
+              <img src="{{ asset('img/star.svg') }}" alt="star" />
+            </div>
+            <p class="text-start">{{ $feedback->feedback }}</p>
           </div>
-          <p class="text-start">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Molestiae, ipsa.
-          </p>
-        </div>
-        <!-- End slide -->
-        <!-- slide -->
-        <div class="swiper-slide">
-          <h2>Yassine</h2>
-          <div class="stars">
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-          </div>
-          <p class="text-start">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Molestiae, ipsa.
-          </p>
-        </div>
-        <!-- End slide -->
-        <!-- slide -->
-        <div class="swiper-slide">
-          <h2>Yassine</h2>
-          <div class="stars">
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-          </div>
-          <p class="text-start">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Molestiae, ipsa.
-          </p>
-        </div>
-        <!-- End slide -->
-        <!-- slide -->
-        <div class="swiper-slide">
-          <h2>Yassine</h2>
-          <div class="stars">
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-          </div>
-          <p class="text-start">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Molestiae, ipsa.
-          </p>
-        </div>
-        <!-- End slide -->
-        <!-- slide -->
-        <div class="swiper-slide">
-          <h2>Yassine</h2>
-          <div class="stars">
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-          </div>
-          <p class="text-start">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Molestiae, ipsa.
-          </p>
-        </div>
-        <!-- End slide -->
-        <!-- slide -->
-        <div class="swiper-slide">
-          <h2>Yassine</h2>
-          <div class="stars">
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-          </div>
-          <p class="text-start">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Molestiae, ipsa.
-          </p>
-        </div>
-        <!-- End slide -->
-        <!-- slide -->
-        <div class="swiper-slide">
-          <h2>Yassine</h2>
-          <div class="stars">
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-          </div>
-          <p class="text-start">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Molestiae, ipsa.
-          </p>
-        </div>
-        <!-- End slide -->
-        <!-- slide -->
-        <div class="swiper-slide">
-          <h2>Yassine</h2>
-          <div class="stars">
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-            <img src="{{ asset('img/star.svg') }}" alt="star" />
-          </div>
-          <p class="text-start">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Molestiae, ipsa.
-          </p>
-        </div>
-        <!-- End slide -->
+          <!-- End slide -->
+
+        @endforeach
+        
+        
       </div>
       <div class="swiper-pagination"></div>
     </div>

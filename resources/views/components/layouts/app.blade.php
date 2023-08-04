@@ -77,8 +77,8 @@
               <div class="">Telephone</div>
             </div>
             <div class="item-info">
-              <h3>0600000000</h3>
-              <h3>0700000000</h3>
+              <h3>{{ setting('site.phone') }}</h3>
+              <h3>{{ setting('site.phone_2') }}</h3>
             </div>
           </div>
           <div>
@@ -86,7 +86,7 @@
               <div>Adress e-mail</div>
             </div>
             <div class="item-info">
-              <h3>test@gmail.com</h3>
+              <h3>{{ setting('site.email') }}</h3>
             </div>
           </div>
           <div>
@@ -94,7 +94,7 @@
               <div>Adress</div>
             </div>
             <div class="item-info">
-              <h3>44 Rue Nationale, <br />365645 Condrieu</h3>
+              <h3>{{ setting('site.adress')  }}</h3>
             </div>
           </div>
         </div>
@@ -106,27 +106,27 @@
           </div>
           <div>
             <div class="item-info">
-              <a href="#">Accueil</a>
+              <a href="{{ route('frontend.index') }}" wire:navigate.hover>Accueil</a>
             </div>
           </div>
           <div>
             <div class="item-info">
-              <a href="#">Envoi postal</a>
+              <a href="{{ route('frontend.postal') }}" wire:navigate.hover>Envoi postal</a>
             </div>
           </div>
           <div>
             <div class="item-info">
-              <a href="#">Nos tarifs</a>
+              <a href="{{ route('frontend.tarifs') }}" wire:navigate.hover>Nos tarifs</a>
             </div>
           </div>
           <div>
             <div class="item-info">
-              <a href="#">F.A.Q</a>
+              <a href="{{ route('frontend.faq') }}" wire:navigate.hover>F.A.Q</a>
             </div>
           </div>
           <div>
             <div class="item-info">
-              <a href="#">Contact</a>
+              <a href="{{ route('frontend.contact') }}" wire:navigate.hover>Contact</a>
             </div>
           </div>
           <div>
@@ -175,10 +175,10 @@
           </div>
           <div>
             <div class="item-info">
-              <a href="#"><img src="{{ asset('img/icons/white/facebook.svg') }}" alt="facebook" /></a>
-              <a href="#"><img src="{{ asset('img/icons/white/insta.svg') }}" alt="instagram" /></a>
-              <a href="#"><img src="{{ asset('img/icons/white/tiktok.svg') }}" alt="tiktok" /></a>
-              <a href="#"><img src="{{ asset('img/icons/white/snap.svg') }}" alt="Snapchat" /></a>
+              <a href="{{ setting('social-media.facebook') }}" target="_blanck"><img src="{{ asset('img/icons/white/facebook.svg') }}" alt="facebook" /></a>
+              <a href="{{ setting('social-media.instagram') }}" target="_blanck"><img src="{{ asset('img/icons/white/insta.svg') }}" alt="instagram" /></a>
+              <a href="{{ setting('social-media.tiktok') }}" target="_blanck"><img src="{{ asset('img/icons/white/tiktok.svg') }}" alt="tiktok" /></a>
+              <a href="{{ setting('social-media.snapchat') }}" target="_blanck"><img src="{{ asset('img/icons/white/snap.svg') }}" alt="Snapchat" /></a>
             </div>
           </div>
         </div>
