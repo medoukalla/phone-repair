@@ -133,12 +133,12 @@
           </div>
           <div>
             <div class="item-info">
-              <a href="#">Avertissement appareils Apple</a>
+              <a href="{{ route('frontend.avertissment') }}" wire:navigate >Avertissement appareils Apple</a>
             </div>
           </div>
           <div>
             <div class="item-info">
-              <a href="#">Qualités de piéces détachées</a>
+              <a href="{{ route('frontend.pieces.detacheed') }}" wire:navigate >Qualités de piéces détachées</a>
             </div>
           </div>
         </div>

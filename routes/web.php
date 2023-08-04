@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\AvertissementAppareilsApple;
 use App\Livewire\Category;
 use App\Livewire\Contact;
 use App\Livewire\CookiesPolicy;
@@ -10,6 +11,7 @@ use App\Livewire\Group;
 use App\Livewire\HomePage;
 use App\Livewire\LegalNotice;
 use App\Livewire\PrivacyPolicy;
+use App\Livewire\QualitesDePiecesDetachees;
 use App\Livewire\Tarifs;
 use App\Livewire\WarrantyConditions;
 use App\Models\Order;
@@ -56,12 +58,15 @@ Route::get('/device/{device}', Device::class )->name('frontend.device');
 // Privacy policy
 Route::get('/Politique_confidentialite', PrivacyPolicy::class  )->name('frontend.privacy');
 // Cookies policy
-Route::get('/politique_de_cookies', CookiesPolicy::class )->name('frontend.cookies.policy');
+Route::get('/Politique_de_cookies', CookiesPolicy::class )->name('frontend.cookies.policy');
 // Warranty conditions
-Route::get('/conditions_de_la_garantie', WarrantyConditions::class )->name('frontend.garantie');
+Route::get('/Conditions_de_la_garantie', WarrantyConditions::class )->name('frontend.garantie');
 // legal notice
-Route::get('/mentions_legales', LegalNotice::class )->name('frontend.legal.notice');
-
+Route::get('/Mentions_legales', LegalNotice::class )->name('frontend.legal.notice');
+// Avertissement appareils Apple
+Route::get('/Avertissement_appareils_apple', AvertissementAppareilsApple::class )->name('frontend.avertissment');
+// Qualités de piéces détachées
+Route::get('/Qualites_de_pieces_detachees', QualitesDePiecesDetachees::class )->name('frontend.pieces.detacheed');
 
 Route::group(['prefix' => 'dashboard'], function () {
     Voyager::routes();
