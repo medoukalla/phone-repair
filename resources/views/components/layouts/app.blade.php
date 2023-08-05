@@ -32,7 +32,7 @@
     <div class="container">
       <div class="top-bar">
         <div class="logo">
-          <img src="{{ asset('img/logo.png') }}" alt="logo" />
+          <img src="{{ asset_app( setting('site.logo') ) }}" alt="logo" />
         </div>
         <nav>
           <ul>
@@ -71,7 +71,7 @@
 
         <div class="col-lg-3 col-sm-6">
           <div class="footer-item">
-            <img src="{{ asset('img/logo.png') }}" alt="logo" />
+            <img src="{{ asset_app( setting('site.logo') ) }}" alt="logo" />
           </div>
           <div>
             <div class="item-title mt-0">
@@ -189,6 +189,7 @@
     </div>
   </footer>
   <!-- Copyrights -->
+  
   <div class="copyrights text-center">
     <h4>© Copyright 2023. site.com</h4>
     <h5>
