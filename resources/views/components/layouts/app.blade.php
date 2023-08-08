@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,22 +24,22 @@
   <title>{{ $title ?? 'Page Title' }}</title>
 </head>
 
-
-
 <body>
   <header>
     <div class="container">
       <div class="top-bar">
         <div class="logo">
-          <img src="{{ asset_app( setting('site.logo') ) }}" alt="logo" />
+          <a href="{{ route('frontend.index') }}" wire:navigate >
+            <img src="{{ asset_app( setting('site.logo') ) }}" alt="logo" />
+          </a>
         </div>
         <nav>
           <ul>
-            <li><a href="{{ route('frontend.index') }}" wire:navigate.hover >Accueil</a></li>
-            <li><a href="{{ route('frontend.tarifs') }}" wire:navigate.hover >Nos tarifs </a></li>
-            <li><a href="{{ route('frontend.faq') }}" wire:navigate.hover >F.A.Q</a></li>
-            <li><a href="{{ route('frontend.contact') }}" wire:navigate.hover >Contact</a></li>
-            <li><a href="{{ route('frontend.postal') }}" wire:navigate.hover class="envoi-postal">Envoi postal</a></li>
+            <li><a href="{{ route('frontend.index') }}" wire:navigate >Accueil</a></li>
+            <li><a href="{{ route('frontend.tarifs') }}" wire:navigate >Nos tarifs </a></li>
+            <li><a href="{{ route('frontend.faq') }}" wire:navigate >F.A.Q</a></li>
+            <li><a href="{{ route('frontend.contact') }}" wire:navigate >Contact</a></li>
+            <li><a href="{{ route('frontend.postal') }}" wire:navigate class="envoi-postal">Envoi postal</a></li>
           </ul>
         </nav>
         <div>
@@ -71,7 +70,9 @@
 
         <div class="col-lg-3 col-sm-6">
           <div class="footer-item">
-            <img src="{{ asset_app( setting('site.logo') ) }}" alt="logo" />
+            <a href="{{ route('frontend.index') }}" wire:navigate >
+              <img src="{{ asset_app( setting('site.logo') ) }}" alt="logo" />
+            </a>
           </div>
           <div>
             <div class="item-title mt-0">
