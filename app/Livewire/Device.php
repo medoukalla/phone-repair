@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Category;
 use App\Models\Device as ModelsDevice;
 use App\Models\Group;
 use App\Models\Repair;
@@ -13,20 +14,22 @@ class Device extends Component
 
 
     public $device;
+    public $category;
+    public $group;
 
     public $repairs;
     public $total = 0;
     public $counted = [];
-    
-
     public $phoneNumber;
 
     // test
     public $order;
 
-    public function mount( ModelsDevice $device ) {
+    public function mount( Category $category, Group $group, ModelsDevice $device ) {
         $this->device = $device;
         $this->repairs = $device->repairs;
+        $this->category = $category;
+        $this->group = $group;
 
         // if order found in session
         if ( session()->has('order') ) {

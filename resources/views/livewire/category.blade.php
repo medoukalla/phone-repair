@@ -16,7 +16,7 @@
           @foreach ($groups as $group)
   
             
-            <a href="{{ route('frontend.group', $group->id) }}" wire:navigate >
+            <a href="{{ route('frontend.group', [ $group->category, $group ] ) }}" wire:navigate >
               <div class="iphone">
                 <img src="{{ asset_app($group->image) }}" alt="{{ $group->name }}" />
               </div>

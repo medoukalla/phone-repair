@@ -101,6 +101,20 @@
           </div>
         </div>
         <div class="container">
+
+          @if ( $order_exists == false )
+            <div class="alert alert-warning border-danger mt-5">
+              <div class="row">
+                    <div class="col-md-9 pt-2">
+                      <b>Click to fill in automaticly</b>
+                    </div>
+                    <div class="col-md-3 text-end">
+                      <a wire:click="start_new_order()" class="btn btn-outline-danger">Start your order</a>
+                    </div>
+                </div>
+            </div>
+          @endif
+
           <div class="row">
             <div class="col-md-12">
               <div class="device-form">
@@ -138,7 +152,7 @@
           @if ( $status == 'success' )
             <div class="alert alert-success mt-5">{{ $status_message }}</div>
           @endif
-          <a><button class="mt-5" onclick="openPopup()" >Envoyer</button></a>
+          <a><button class="mt-5" @if ( $order_exists == true ) onclick="openPopup()" @endif >Envoyer</button></a>
         </div>
       </div>
     </form>

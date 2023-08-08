@@ -32,6 +32,8 @@ class EnvoiPostal extends Component
     public $status;
     public $status_message;
 
+    // order_exists
+    public $order_exists = false;
 
     public function mount() {
 
@@ -58,7 +60,12 @@ class EnvoiPostal extends Component
 
             $this->repairs_ids = Repair::select('id')->whereIn( 'id', $order['repairs'] )->get();
 
-        }else { $this->device = $this->phoneNumber = $this->repairs = null; }
+            $this->order_exists = true;
+
+        }else { 
+            $this->device = $this->phoneNumber = $this->repairs = null;
+            $this->order_exists = false;
+        }
 
     }
 
@@ -95,6 +102,16 @@ class EnvoiPostal extends Component
 
         }
 
+    }
+
+
+    // start from begining 
+    public function start_new_order() {
+        // clear the inputs if exists
+        $this->firstName = $this->lastName = $this->address = $this->phoneNumber = $this->city = $this->codePostal = $this->device_password = $this->description = $this->status = $this->status_message = null;
+        // clear the session if exists
+        session()->forget('order');
+        return $this->redirect(Tarifs::class);
     }
 
 

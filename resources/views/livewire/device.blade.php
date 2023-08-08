@@ -4,7 +4,7 @@
       <div class="container">
         <h1>Réparez vos appareils électroniques en toute confiance.</h1>
         <div class="companies-board gap-4" style="position: relative;" >
-          <a href="{{ route('frontend.group', $device->group->id ) }}" class="btn btn-light" wire:navigate.hover style="position: absolute;left: 15px;top: 15px;border-radius: 30px;width: 50px;">
+          <a href="{{ route('frontend.group', [ $device->category, $device->group ] ) }}" class="btn btn-light" wire:navigate.hover style="position: absolute;left: 15px;top: 15px;border-radius: 30px;width: 50px;">
             <i class="fas fa-arrow-left"><</i>
           </a>
 

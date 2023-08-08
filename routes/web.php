@@ -46,13 +46,13 @@ Route::get('/envoi_postal', EnvoiPostal::class )->name('frontend.postal');
 Route::post('/envoi_postal', [Order::class, 'store'])->name('frontend.store.order');
 
 // show category groups
-Route::get('/category/{category}', Category::class )->name('frontend.category');
+Route::get('command/{category:slug}', Category::class )->name('frontend.category');
 
 // Show group devices
-Route::get('/group/{group}', Group::class )->name('frontend.group');
+Route::get('command/{category:slug}/{group:slug}', Group::class )->name('frontend.group');
 
 // Show device with list of repais
-Route::get('/device/{device}', Device::class )->name('frontend.device');
+Route::get('command/{category:slug}/{group:slug}/{device:slug}', Device::class )->name('frontend.device');
 
 
 // Privacy policy

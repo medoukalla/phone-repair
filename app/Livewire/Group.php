@@ -14,10 +14,13 @@ class Group extends Component
 
     public $devices;
     public $group;
+    public $category;
 
-    public function mount( ModelsGroup $group ) {
-        $this->devices = $group->devices;
-        $this->group   = $group;
+    public function mount( Category $category, ModelsGroup $group ) {
+        $this->devices  = $group->devices;
+        $this->group    = $group;
+        $this->category = $category;
+        
     }
 
     public function render()
